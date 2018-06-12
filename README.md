@@ -81,20 +81,27 @@
 
 围绕着数据库还有一个重点就是Data Modeling能力，比如一个关系型数据库的设计，基本的三范式肯定要懂，但是也要知道OLAP下如何设计，还有NoSQL上的Data Modeling，denormalization的时候要尽量可以避免多余重复等等。
 
-另外在这个基础上，你应该相当熟悉partitioning和replication的实现和常见问题。
+另外一个重点是，你必须应当**相当熟悉SQL语句的优化**！同时应该知道execution plan的工作原理。
+
+在这个基础上，你应该相当熟悉partitioning和replication的实现和常见问题。
 
 
-### 2.2 其他 （Apache套餐）
+#### 2.2 其他 （Apache套餐）
 
 需要熟悉主要的原理，包括Hadoop cluster 通信，HDFS读写的原理，YARN，MapReduce等。可以了解下 sqoop 迁移rdbms到Hadoop，Hive Query Language，Pig 分析等等。同时应该以Hadoop为例了解partitioning的设计以优化在HDFS上的MapReduce工作效率。
 
-Spark/Flink 等做几个pipeline，或者自己实现一下自带的几个example。
+我个人认为，刚入门的工作是不太可能将你分配到架构或者cluster admin岗位的，因此大都还是写pipeline脚本，因此Spark／Flink／Beam等可以多练， MapReduce多写多练， park/Flink 等做几个pipeline，或者自己实现一下自带的几个example。
 
-我个人认为，刚入门的工作是不太可能将你分配到架构或者cluster admin岗位的，因此大都还是写pipeline脚本，因此Spark／Flink／Beam等可以多练， MapReduce多写多练。
+除此以外，可以了解一下Airflow／Luigi这种ETL 管理package，工作中十分常用。
 
-### 2.3 零碎知识
+
+#### 2.3 零碎知识
 
 知道几种常见的encoding，比如Avro和很常用的Protocol Buff。可以在写pipeline的时候，给自己提高难度，比如source是ProtoBuf，怎么通过kafka发／收，最终在某个数据库落地。
+
+Docker 十分推荐学会，如果将自己的package打包，并deploy。
+
+Jenkins 建议了解，CD／CI的关键。
 
 ### 3） 例子
 
@@ -104,11 +111,34 @@ Spark/Flink 等做几个pipeline，或者自己实现一下自带的几个exampl
  - PostgreSQL 熟悉，做过很多项目，用过MySQL，设计过
  - MongoDB／Cassandra 熟悉，做过项目
  - BigTable，懂原理，没做过实际项目。
- - Hadoop/Spark/Dataflow 熟练，做过PB级的数据流
+ - Hadoop/Spark/Dataflow 熟练，做过TB级的数据流
  - BigQuery 熟练
+ - Docker/Jenkins 熟练，日常工作用
 
-## 初级阶段
+## 三 学习阶段
 
-## 中级阶段
+### 1） 初级阶段
 
-## 终极阶段
+#### 1.1 阶段目标：
+
+Python入门进阶到6分水平。接触各种类型的数据库，思考并了解各种数据库的区别和原理。
+
+这个阶段我并不推荐做什么实际的project，首先你姿势水平不够，只能强行抄一些项目示例，其次真的抄了，你也学不到什么具体的项目逻辑，对个人提升没什么帮助。
+
+#### 1.2 具体办法：
+
+如果Python和Java都还没有入门，请先搜各种资料入门，比如廖雪峰的Python等等。
+
+- 然后每天刷三道算法题，Leetcode／lintcode都可以，不懂的题目Java和Python的解法都看，争取都能阅读。Python的解法应该会写。
+
+- 在阿里云或者本地，安装几款常见的数据库，个人推荐PostgreSQL和MongoDb，还有Redis， 学会基本的环境部署，user setup等等。
+
+- 用Python （比如SqlAlchemy库和Pymongo库）写入一波数据到数据库。数据可以是自己用Python爬虫爬的，也可以直接搜网上公开的数据（很多大公司会有开源数据）。
+
+- 思考一下用不同的数据库应该如何存储，能解决什么问题？应对什么情况？有什么好处？学会建表，并熟悉Data Modeling的知识。
+
+- 
+
+### 2） 中级阶段
+
+### 3） 终极阶段
