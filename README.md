@@ -107,6 +107,9 @@ Jenkins 建议了解，CD／CI的关键。
 
 最后拿我自己的技术栈做个例子：
 
+ - Python 熟练
+ - Scala 熟悉
+ - Java 熟悉
  - redis／memcache 懂原理，做过项目，比较熟悉
  - PostgreSQL 熟悉，做过很多项目，用过MySQL，设计过
  - MongoDB／Cassandra 熟悉，做过项目
