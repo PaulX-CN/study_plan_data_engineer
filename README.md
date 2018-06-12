@@ -49,6 +49,8 @@
   首先很明确，Python和Java是绝对必须要会的两门语言，不是说这两门比其他语言好，而是因为，这两门在big data 这一块在流行程度和开放接口上来说确实是没有对手。几个最常用的工具，Hadoop Spark，Storm, Beam, Hive, Flink, Kafka, 全部都是jvm上的语言写的，Google Cloud生态圈上的技术因为亲儿子的原因会有一些go的api，但在国内基本可以不用考虑。国内的阿里云生态我不清楚，欢迎指正。
 
   其次也要明确，光会Python 入门尚可，行业内进阶是不太可能的。Python的定位纯粹是一个脚本语言，用来写特定的pipeline很上手，但是一旦基础库有bug，需要深入了解debug，这就必须会Java了，所以基本上所有数据工程师的职位都会要求会这两门语言。
+  
+  最后呢，实际工作里其实很少需要你去自己造一个轮子，但是做为一个新兴领域，documentation不全和有bug是很正常的，因此要求你必须要有自己读源码的能力，起码，单测模块必须一看就懂。
 
 #### Python 
 
@@ -57,15 +59,35 @@
 
 #### Java
 
-  学无止境，越熟练越好，某些库如Apache Beam是只有Java Api的（Python Api如同虚设）。
+  学无止境，越熟练越好，某些库如Apache Beam是只有Java Api的（Python Api如同虚设）。能够看懂一个开源项目的底层代码实现应该是标准要求。
 
 #### Scala
 
   Scala是我个人很喜欢的一个语言，是我真正接触函数式编程的入门语言。同时因为这几年spark和flink变火，scala在大数据方面也有了一些应用。看个人喜好吧。
 
-### 常用库/工具/数据库
+### 常用库/工具/数据库 
 
-1. Hadoop
+实际上你是不太可能全部用到这些技术的，个人感觉核心是各种数据库的设计和结构，比如DynamDB和BigTable 为代表的两个类型数据库的原理和实现，在这个基础上了解一些大热的几个数据库（有机会应用一下），MongoDb，Cassandra， Hbase， 还有一些常见的大型数仓，比如redshift和bigquery，关系型数据库至少要有一个比较熟练，同时了解各个数据库设计上的一些区别，比如MVCC的实现原理和一个实现的例子。
+
+围绕着数据库还有一个重点就是Data Modeling能力，比如一个关系型数据库的设计，基本的三范式肯定要懂，但是也要了解OLAP下如何设计，还有NoSQL上的Data Modeling，denormalization的时候要尽量可以避免多余重复。
+
+拿我自己的技术栈做个例子：
+
+ - redis／memcache 懂原理，做过项目，比较熟悉
+ - PostgreSQL 熟悉，做过很多项目，用过MySQL，设计过
+ - MongoDB／Cassandra 熟悉，做过项目
+ - BigTable，懂原理，没做过实际项目。
+ - Hadoop/Spark/Dataflow 熟练，做过PB级的数据流
+ - BigQuery 熟练
+
+除了数据库以外
+
+1. Apache 套餐： Hadoop/Spark/Flink/Storm/Beam
+
+需要熟悉主要的原理，包括Hadoop cluster 通信，HDFS读写的原理，YARN，MapReduce等。可以了解下 sqoop 迁移rdbms到Hadoop，Hive Query Language，Pig 分析等等。同时应该以Hadoop为例了解partitioning的设计以优化在HDFS上的MapReduce工作效率。
+
+Spark
+
 
 
 ## 初级阶段
