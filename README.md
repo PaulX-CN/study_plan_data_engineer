@@ -1,36 +1,34 @@
 # study_plan_data_engineer
 
-首先我是自学转行的数据工程师，其次在美国，和国内情况可能不太一样，所以给个大概的思路吧。
+首先我是自学转行的数据工程师，其次我在美国，和国内情况可能不太一样，所以给个大概的思路吧。
 
 
 
 ## 前言：
 
   个人不懂网络安全方向，但感觉这一块大都是运维的部门做的（？我不确定，勿喷），这里就不献丑了。大数据方向也主要分data scientist 数据分析和 data platform 数据平台两大块。大数据分析在大公司其实还是围绕sql （加上hive上或者sparksql上操作），高端点的用神经网络，但是量级也不会太大。
-对于大数据工程师来说，最主要的应该是
+对于大数据工程师来说，最主要的应该是和数据分析组合作，同时维护各种大数据pipeline和infrastructure以达到更好地提供商业性决策的目的。
 
+这有个简单的例子 （以下英文我就不翻译了，做大数据方向应当有更强的英语阅读能力，毕竟这一块比较新，资料和新技术都是以英文为主的）：
 
 **What you’ll do**
 
-- Build large-scale batch and real-time data pipelines with data processing frameworks like Scalding, Scio, Storm, Spark and the Google Cloud Platform. 
-- Leverage best practices in continuous integration and delivery.
-- Help drive optimization, testing and tooling to improve data quality.
-- Collaborate with other engineers, ML experts and stakeholders, taking learning and leadership opportunities that will arise every single day.
-- Work in cross functional agile teams to continuously experiment, iterate and deliver on new product objectives.
+- **Build large-scale batch and real-time data pipelines** with data processing frameworks like Scalding, Scio, Storm, Spark and the Google Cloud Platform. 
+- Leverage best practices in **continuous integration and delivery**.
+- Help drive optimization, testing and tooling to **improve data quality**.
+- Contributing at a senior-level to the **data warehouse design and data preparation** by implementing a solid, robust, extensible design that supports key business flows.
+- Performing all of the necessary **data transformations to populate data into a warehouse table structure** that is optimized for reporting.
 
-· Contributing at a senior-level to the data warehouse design and data preparation by implementing a solid, robust, extensible design that supports key business flows.
-· Performing all of the necessary data transformations to populate data into a warehouse table structure that is optimized for reporting.
-· Establishing efficient design and programming patterns for engineers as well as for non-technical peoples.
-· Designing, integrating and documenting technical components for seamless data extraction and analysis on big data platform.
-· Ensuring best practices that can be adopted in Big Data stack and share across teams and BUs.
-· Providing operational excellence through root cause analysis and continuous improvement for Big Data technologies and processes and contributes back to open source community.
 
-先贴个比较常见的数据工程师的jd吧：
+## 基础 + 工具
+
+先贴个比较常见的数据工程师的jd吧（这是mid 到senior level的，但是贴出来用作我们的学习目标）：
 
 **Who you are**
 
 - You know how to work with high volume heterogeneous data, preferably with distributed systems such as Hadoop, BigTable, and Cassandra. 
-- You are knowledgeable about data modeling, data access, and data storage techniques.
+- You are knowledgeable about data modeling, data access, and data storage techniques in a Data warehousing context.
+- Able to write, analyze, and debug SQL queries
 - You care about agile software processes, data-driven development, reliability, and responsible experimentation.
 - Experience with at least one scripting language (Shell, Python, Perl etc.)
 - Experience with an OO programming language like Java.
@@ -38,23 +36,37 @@
 **Preferred Qualifications**
 - Experience working extensively in multi-petabyte DW environment
 - Experience in engineering large-scale systems in a product environment
-- Ability to write, analyze, and debug SQL queries
 - Experience with Data Warehouse design, ETL (Extraction, Transformation & Load), architecting efficient software designs for DW platform.
-- Knowledge of database modeling and design in a Data warehousing context
 - Knowledge of NoSQL stores is a plus
 - Experienced in implementing data warehouses with MPP databases like Teradata. [is a plus]
 - Ideal candidates will have a deep understanding of technical and functional designs for Databases, Data Warehousing, Reporting, and Data Mining areas
 - Passion for about continuous learning, experimenting, applying and contributing towards cutting edge open source Big Data technologies and software paradigms
 
+下面分块来详细说。
+
 ### 语言： 
+
+  首先很明确，Python和Java是绝对必须要会的两门语言，不是说这两门比其他语言好，而是因为，这两门在big data 这一块在流行程度和开放接口上来说确实是没有对手。几个最常用的工具，Hadoop Spark，Storm, Beam, Hive, Flink, Kafka, 全部都是jvm上的语言写的，Google Cloud生态圈上的技术因为亲儿子的原因会有一些go的api，但在国内基本可以不用考虑。国内的阿里云生态我不清楚，欢迎指正。
+
+  其次也要明确，光会Python 入门尚可，行业内进阶是不太可能的。Python的定位纯粹是一个脚本语言，用来写特定的pipeline很上手，但是一旦基础库有bug，需要深入了解debug，这就必须会Java了，所以基本上所有数据工程师的职位都会要求会这两门语言。
 
 #### Python 
 
+  10分来说，Python应当最起码掌握到7分以上。7分我觉得大概是什么概念呢，首先你任何面试算法应该是可以用Python写出来的。其次应当对Python本身的细节有不错的了解了，比如一些常用的库，怎么多线程，多进程，Class的一些特别方法(__new__, __cmp__诸如此类)，迭代器，装饰器等等。
+  除此以外，这个时候你应当可以较快地（个人感觉一个星期的样子？）看懂一个中小型开源项目的结构，哪些module是核心部件，互相如何调用的，需要有能够快速上手底层debug一个库的能力。
+
 #### Java
 
-### 常用库/工具
+  学无止境，越熟练越好，某些库如Apache Beam是只有Java Api的（Python Api如同虚设）。
 
-### 数据库
+#### Scala
+
+  Scala是我个人很喜欢的一个语言，是我真正接触函数式编程的入门语言。同时因为这几年spark和flink变火，scala在大数据方面也有了一些应用。看个人喜好吧。
+
+### 常用库/工具/数据库
+
+1. Hadoop
+
 
 ## 初级阶段
 
