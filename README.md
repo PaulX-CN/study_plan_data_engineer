@@ -190,18 +190,3 @@ Python 十分熟练。Java从能读提升到能略写，没有Python API的时�
 ### 3） 终极阶段
 
 无他，贡献开源，然后写开源。
-
-
-
-## Interview Questions:
-
-- Generic MapReduce in Python (Multiprocessing)
-- How to sort 1TB file in Python on a single machine with 4GB RAM?
-
-### Spark:
- -  RDD, 5 basic elements:
-   - Partitions
-   - Function for computing them
-   - Dependency dags
-   - Preferred compute location (HDFS block etc.)
-   - Partitioner (Hash partitioner etc.)
